@@ -1,4 +1,4 @@
-import { StyleSheet, Text, useColorScheme, View } from 'react-native'
+import { Platform, StyleSheet, Text, useColorScheme, View } from 'react-native'
 import React from 'react'
 import { color } from '../../../utils';
 
@@ -7,7 +7,7 @@ const Container = ({ children }) => {
 
     const ContainerStyle = {
         backgroundColor: color[theme].appBg,
-        flex: 1
+        flex: 1,
     }
     return (
         <View style={ContainerStyle}>

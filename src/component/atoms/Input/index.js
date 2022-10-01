@@ -3,7 +3,7 @@ import React from 'react'
 import Gap from '../Gap'
 import { color } from '../../../utils'
 
-const Input = () => {
+const Input = ({ label, ...props }) => {
     const theme = useColorScheme()
 
     const labelStyle = {
@@ -17,9 +17,9 @@ const Input = () => {
 
     return (
         <View style={styles.container}>
-            <Text style={[styles.label, labelStyle]}>Email Address</Text>
+            <Text style={[styles.label, labelStyle]}>{label} </Text>
             <Gap height={6} />
-            <TextInput style={[inputStyle, styles.input]} />
+            <TextInput {...props} style={[inputStyle, styles.input]} />
         </View>
     )
 }

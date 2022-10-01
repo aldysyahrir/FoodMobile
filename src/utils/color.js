@@ -9,7 +9,8 @@ export const color = {
         yellow: "#ffc700",
         red: "#d9435e",
         green: "#1abc9c",
-        black: "#000000"
+        black: "#000000",
+        white: "#ffffff"
     },
     light: {
         appBg: "#fafafc",
@@ -20,6 +21,8 @@ export const color = {
         yellow: "#ffc700",
         red: "#d9435e",
         green: "#1abc9c",
-        black: "#000000"
+        black: "#000000",
+        white: "#ffffff"
+
     }
 }

@@ -1,4 +1,4 @@
-import { Image, StyleSheet, Text, TouchableOpacity, useColorScheme, View } from 'react-native'
+import { Image, Platform, StyleSheet, Text, TouchableOpacity, useColorScheme, View } from 'react-native'
 import React from 'react'
 import ShowIf from '../ShowIf'
 import { ICArrowLeft } from '../../../assets/icons'
@@ -15,8 +15,14 @@ const Header = ({ leftIcon, title, desc, withAvatar, onLeftIconPress }) => {
         color: color[theme].secondaryText
     }
 
+    const containerStyle = {
+        backgroundColor: color[theme].defBg,
+        paddingTop: Platform.OS === "ios" ? 52 : 36
+
+    }
+
     return (
-        <View style={styles.container}>
+        <View style={[styles.container, containerStyle]}>
             <ShowIf show={leftIcon}>
                 <TouchableOpacity style={styles.IcLeft}>
                     <ICArrowLeft />
@@ -45,7 +51,7 @@ const styles = StyleSheet.create({
         paddingTop: 36,
         flexDirection: 'row',
         alignItems: 'center',
-        height: 112,
+        height: Platform.OS === "ios" ? 144 : 112,
     },
     IcLeft: {
         marginRight: 24,
